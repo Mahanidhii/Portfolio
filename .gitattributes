@@ -1,0 +1,9 @@
+# Automatically normalize text files to LF in the repository
+* text=auto
+# Force LF for shell scripts
+*.sh text eol=lf
+# Force CRLF for batch files
+*.bat text eol=crlf
+# Treat binary files as-is (no normalization)
+*.jpg -text
+*.png -text
