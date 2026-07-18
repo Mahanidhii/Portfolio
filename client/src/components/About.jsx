@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { personal, education } from '../data/content.js';
+import selfPic from '../assets/images/SelfPic.jpg';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -60,14 +61,11 @@ export default function About() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
         >
-          <div
-            className="glass-panel tech-border w-full min-h-[320px] grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                'url("https://lh3.googleusercontent.com/aida-public/AB6AXuANuqeItIu_5q81wMf9a5v09HvnlNrynHfZxlJAVca3I9hKfHB8__jfEeeT443S6K1BZ_hyZZ-_yigRP8YQuN0DbNPg2tjBVL6QzBU-MRcGr-nsFj3QZX32tRLiBo02psaUbx9l7I5uo8datlUu3kUdBQj9bv7r7lxaUjIPNk1g79p9-CaXhp8ir5tUJCVJ6bwFy58cJHzzdKjh9n0jUglfRLm5T0zetqvvbSIyhTai7rdjoKzO3Ngzn2Z2x7M1OLUB2Xjy9gENw0k")',
-            }}
-            role="img"
-            aria-label="Abstract neural network visualization representing AI and machine learning concepts"
+          <img
+            src={selfPic}
+            alt="Mahanidhi G K"
+            className="glass-panel tech-border w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            style={{ minHeight: '320px', maxHeight: '420px' }}
           />
           {/* Offset border decoration */}
           <div
