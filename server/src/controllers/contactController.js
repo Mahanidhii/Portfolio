@@ -48,7 +48,7 @@ async function handleContact(req, res) {
     from:    `"Portfolio Contact" <${process.env.SMTP_USER || 'noreply@portfolio.dev'}>`,
     to:      dest,
     replyTo: email.trim(),
-    subject: `New Portfolio Inquiry from ${name.trim()}`,
+    subject: `[PORTFOLIO] New message from ${name.trim()}`,
     text: `
 Name:    ${name.trim()}
 Email:   ${email.trim()}
