@@ -179,7 +179,7 @@ export default function Contact() {
     setErrMsg('');
 
     try {
-      await axios.post('/api/contact', {
+      await axios.post(`${import.meta.env.VITE_API_URL || ''}/api/contact`, {
         name:    form.name,
         email:   form.email,
         message: form.message,
