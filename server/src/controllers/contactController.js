@@ -48,7 +48,7 @@ async function handleContact(req, res) {
     from:    `"Portfolio Contact" <${process.env.SMTP_USER || 'noreply@portfolio.dev'}>`,
     to:      dest,
     replyTo: email.trim(),
-    subject: `[Portfolio] New message from ${name.trim()}`,
+    subject: `New Portfolio Inquiry from ${name.trim()}`,
     text: `
 Name:    ${name.trim()}
 Email:   ${email.trim()}
@@ -57,7 +57,7 @@ ${message.trim()}
     `.trim(),
     html: `
 <div style="font-family: 'JetBrains Mono', monospace; background:#12131a; color:#e2e1eb; padding:24px; border-left:3px solid #74f5ff;">
-  <h2 style="color:#74f5ff; font-size:18px; margin:0 0 16px;">[ NEW_CONTACT_RECEIVED ]</h2>
+  <h2 style="color:#74f5ff; font-size:18px; margin:0 0 16px;">Someone reached out  via your Portfolio!!</h2>
   <p><strong style="color:#00dbe7;">Name:</strong> ${name.trim()}</p>
   <p><strong style="color:#00dbe7;">Email:</strong> <a href="mailto:${email.trim()}" style="color:#d0bcff;">${email.trim()}</a></p>
   <hr style="border-color:#3a494b; margin:16px 0;"/>
