@@ -5,9 +5,9 @@ import { personal } from '../data/content.js';
 
 const INITIAL = { name: '', email: '', message: '', honeypot: '' };
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    TRANSMIT BUTTON — physics-driven, magnetic hover, scan-line
-───────────────────────────────────────────────────────────────*/
+*/
 function TransmitButton({ status }) {
   const btnRef = useRef(null);
   const [ripples, setRipples] = useState([]);
@@ -161,9 +161,9 @@ function TransmitButton({ status }) {
   );
 }
 
-/* ─────────────────────────────────────────────────────────────
+/* 
    CONTACT SECTION
-───────────────────────────────────────────────────────────────*/
+*/
 export default function Contact() {
   const [form, setForm]     = useState(INITIAL);
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
