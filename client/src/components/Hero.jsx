@@ -26,11 +26,21 @@ export default function Hero() {
         {/* Status chip */}
         <motion.div
           variants={item}
-          className="font-mono text-xs text-[--color-secondary] mb-4 flex items-center gap-2"
+          className="font-mono text-xs text-[--color-secondary] mb-3 flex items-center gap-2"
           aria-hidden="true"
         >
           <span className="w-2 h-2 rounded-full bg-[--color-secondary] animate-pulse inline-block" />
           SYS.INIT_USER_PROFILE
+        </motion.div>
+
+        {/* Availability badge */}
+        <motion.div
+          variants={item}
+          className="font-mono text-[10px] text-[--color-primary-fixed] bg-[--color-primary-fixed]/10 border border-[--color-primary-fixed]/30 px-3 py-1 inline-flex items-center gap-2 mb-4 w-fit"
+          aria-label="Open to opportunities"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-[--color-primary-fixed] animate-pulse inline-block" />
+          OPEN_TO_OPPORTUNITIES // SDE &amp; ML ROLES // 2027 GRAD
         </motion.div>
 
         {/* Name */}
@@ -76,6 +86,15 @@ export default function Hero() {
             className="border border-[--color-secondary] text-[--color-secondary] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:bg-[--color-secondary]/10 transition-colors"
           >
             Get In Touch
+          </a>
+          <a
+            href={personal.resumeUrl}
+            download
+            className="border border-[--color-outline-variant]/60 text-[--color-on-surface-variant] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:border-[--color-primary-fixed]/50 hover:text-[--color-primary-fixed] transition-colors inline-flex items-center gap-2"
+            aria-label="Download resume PDF"
+          >
+            <span className="material-symbols-outlined text-base" aria-hidden="true">download</span>
+            Resume
           </a>
         </motion.div>
 

@@ -59,9 +59,17 @@ function ProjectCard({ project, index, featured }) {
         {project.title}
       </h3>
 
-      <p className="font-inter text-sm text-[--color-on-surface-variant] leading-relaxed mb-4 flex-grow">
+      <p className="font-inter text-sm text-[--color-on-surface-variant] leading-relaxed mb-3 flex-grow">
         {project.description}
       </p>
+
+      {/* Metric / outcome stat line */}
+      {project.metric && (
+        <div className="font-mono text-[10px] text-[--color-primary-fixed] bg-[--color-primary-fixed]/8 border border-[--color-primary-fixed]/20 px-3 py-1.5 mb-4 flex items-center gap-2 leading-snug">
+          <span className="text-[--color-secondary] select-none">▸</span>
+          {project.metric}
+        </div>
+      )}
 
       {/* Sub-projects (Applied Data Analysis) */}
       {project.subProjects && (

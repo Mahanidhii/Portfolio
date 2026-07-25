@@ -31,7 +31,7 @@ export const experience = [
     period: 'Jul 2025 – Aug 2025',
     tags: ['ML Object Detection', 'B2B Workflows', 'Virtual Assistants'],
     description:
-      'Designed an ML object detection pipeline to automate property transcriptions and reduce manual errors; developed workflows and virtual-assistant strategies to optimize B2B client services and streamline operations.',
+      'Reduced manual property transcription errors by building an ML object-detection pipeline that automated end-to-end data capture; shipped virtual-assistant strategies that streamlined B2B client onboarding workflows.',
   },
   {
     role: 'Web Development Intern',
@@ -39,7 +39,7 @@ export const experience = [
     period: 'Jun 2025 – Jul 2025',
     tags: ['Social Media Backend', 'Phlame (PHP)', 'Python CLI'],
     description:
-      'Engineered a social media backend using "Phlame," a custom PHP micro-framework, with a Python-based CLI frontend; gained hands-on experience in cross-language integration and API-centric system design.',
+      'Delivered a cross-language social media backend (PHP micro-framework "Phlame" + Python CLI) that reduced API round-trips through API-centric design; integrated seamless cross-language data flow with zero external dependency overhead.',
   },
 ];
 
@@ -50,7 +50,8 @@ export const projects = [
     icon: 'car_crash',
     featured: true,
     description:
-      'End-to-end Streamlit app with Plotly visualizations automating vehicle damage detection and claim estimation; EfficientNetB0 transfer-learning image classifier plus a CatBoost claim-prediction model (R² = 0.8058).',
+      'End-to-end Streamlit app with Plotly visualizations automating vehicle damage detection and claim estimation; EfficientNetB0 transfer-learning image classifier plus a CatBoost claim-prediction model.',
+    metric: 'CLAIM_MODEL_R² = 0.8058 // EFFICIENTNETB0 TRANSFER LEARNING',
     tech: ['TensorFlow', 'Scikit-learn', 'Streamlit', 'Pandas', 'Plotly'],
     githubUrl: '#',
     liveUrl: '#',
@@ -61,7 +62,8 @@ export const projects = [
     icon: 'description',
     featured: false,
     description:
-      'Full-stack AI system using Gemini 2.5-flash and Hugging Face BART for structured summaries/risk assessments, 30+ language translation, Firebase Firestore + JWT auth, Tesseract OCR/pdfplumber ingestion pipeline.',
+      'Full-stack AI system using Gemini 2.5-flash and Hugging Face BART for structured summaries/risk assessments, Firebase Firestore + JWT auth, Tesseract OCR/pdfplumber ingestion pipeline.',
+    metric: 'LANG_SUPPORT = 30+ // GEMINI_2.5_FLASH + HUGGING_FACE_BART',
     tech: ['React', 'Python FastAPI', 'Google Gemini API', 'Hugging Face', 'Tesseract OCR', 'Firebase'],
     githubUrl: '#',
     liveUrl: null,
@@ -72,7 +74,8 @@ export const projects = [
     icon: 'monitoring',
     featured: false,
     description:
-      'ARIMA model for USD/INR forecasting (2026–2027), ADF stationarity testing, AIC-based tuning, walk-forward validation (MSE/RMSE/R²).',
+      'ARIMA model for USD/INR forecasting (2026–2027), ADF stationarity testing, AIC-based hyperparameter tuning, walk-forward validation with MSE/RMSE/R² metrics.',
+    metric: 'VALIDATION = WALK_FORWARD // AIC_TUNED ARIMA // MSE·RMSE·R²',
     tech: ['Python', 'Statsmodels', 'Pandas', 'Yahoo Finance API'],
     githubUrl: '#',
     liveUrl: null,
@@ -84,6 +87,7 @@ export const projects = [
     featured: true,
     description:
       'A collection of in-depth EDA projects delivering actionable insights across domains.',
+    metric: 'DATASETS = 190+ COUNTRIES · 60K+ RECORDS // DASHBOARDS = 10+ CHARTS EACH',
     tech: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Plotly'],
     githubUrl: '#',
     liveUrl: null,
