@@ -30,7 +30,7 @@ export default function Hero() {
           aria-hidden="true"
         >
           <span className="w-2 h-2 rounded-full bg-[--color-secondary] animate-pulse inline-block" />
-          SYS.INIT_USER_PROFILE
+          USER_PROFILE
         </motion.div>
 
         {/* Availability badge */}
