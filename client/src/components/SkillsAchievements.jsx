@@ -16,7 +16,7 @@ export default function SkillsAchievements() {
       {/* ── Skills (2 of 3 cols) ─────────────────────────────── */}
       <motion.section
         id="skills"
-        className="lg:col-span-2 glass-panel tech-border p-8 scroll-mt-24"
+        className="lg:col-span-2 glass-panel tech-border p-5 sm:p-8 scroll-mt-24"
         aria-labelledby="skills-heading"
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function SkillsAchievements() {
       {/* ── Achievements (1 of 3 cols) ───────────────────────── */}
       <motion.section
         id="achievements"
-        className="glass-panel tech-border p-8 flex flex-col scroll-mt-24"
+        className="glass-panel tech-border p-5 sm:p-8 flex flex-col scroll-mt-24"
         aria-labelledby="ach-heading"
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}

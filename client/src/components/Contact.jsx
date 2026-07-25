@@ -165,15 +165,43 @@ function TransmitButton({ status }) {
    CONTACT SECTION
 */
 export default function Contact() {
-  const [form, setForm]     = useState(INITIAL);
-  const [status, setStatus] = useState('idle'); // idle | loading | success | error
-  const [errMsg, setErrMsg] = useState('');
+  const [form, setForm]           = useState(INITIAL);
+  const [status, setStatus]       = useState('idle'); // idle | loading | success | error
+  const [errMsg, setErrMsg]       = useState('');
+  const [fieldErrors, setFieldErrors] = useState({ name: '', email: '', message: '' });
 
-  const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  // Validate all fields, return error map (empty strings = valid)
+  const validateForm = (f) => {
+    const errors = { name: '', email: '', message: '' };
+    if (!f.name.trim())
+      errors.name = 'ERR::NAME_NODE_REQUIRED — field cannot be empty';
+    if (!f.email.trim())
+      errors.email = 'ERR::EMAIL_PROTOCOL_REQUIRED — field cannot be empty';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim()))
+      errors.email = 'ERR::INVALID_EMAIL_FORMAT — check your address';
+    if (!f.message.trim())
+      errors.message = 'ERR::DATA_PAYLOAD_REQUIRED — field cannot be empty';
+    return errors;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+    // Clear individual field error on change
+    if (fieldErrors[name])
+      setFieldErrors((fe) => ({ ...fe, [name]: '' }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form.honeypot) return;
+
+    const errors = validateForm(form);
+    const hasErrors = Object.values(errors).some(Boolean);
+    if (hasErrors) {
+      setFieldErrors(errors);
+      return;
+    }
 
     setStatus('loading');
     setErrMsg('');
@@ -217,7 +245,7 @@ export default function Contact() {
         </p>
 
         <form
-          className="glass-panel tech-border p-8 text-left space-y-6"
+          className="glass-panel tech-border p-5 sm:p-8 text-left space-y-6"
           onSubmit={handleSubmit}
           noValidate
           aria-label="Contact form"
@@ -239,8 +267,19 @@ export default function Contact() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/70"
+                aria-describedby={fieldErrors.name ? 'err-name' : undefined}
+                aria-invalid={!!fieldErrors.name}
+                className={`w-full bg-[--color-surface-container] border-b border-t-0 border-x-0 focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/70 ${
+                  fieldErrors.name
+                    ? 'border-[--color-error] focus:border-[--color-error]'
+                    : 'border-[--color-outline-variant] focus:border-[--color-primary-fixed]'
+                }`}
               />
+              {fieldErrors.name && (
+                <p id="err-name" role="alert" className="font-mono text-[10px] text-[--color-error] mt-1.5 leading-snug">
+                  ✗ {fieldErrors.name}
+                </p>
+              )}
             </div>
             <div>
               <label
@@ -258,8 +297,19 @@ export default function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="your@email.com"
-                className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/70"
+                aria-describedby={fieldErrors.email ? 'err-email' : undefined}
+                aria-invalid={!!fieldErrors.email}
+                className={`w-full bg-[--color-surface-container] border-b border-t-0 border-x-0 focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/70 ${
+                  fieldErrors.email
+                    ? 'border-[--color-error] focus:border-[--color-error]'
+                    : 'border-[--color-outline-variant] focus:border-[--color-primary-fixed]'
+                }`}
               />
+              {fieldErrors.email && (
+                <p id="err-email" role="alert" className="font-mono text-[10px] text-[--color-error] mt-1.5 leading-snug">
+                  ✗ {fieldErrors.email}
+                </p>
+              )}
             </div>
           </div>
 
@@ -278,8 +328,19 @@ export default function Contact() {
               value={form.message}
               onChange={handleChange}
               placeholder="Your message..."
-              className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors resize-none placeholder:text-[--color-on-surface-variant]/70"
+              aria-describedby={fieldErrors.message ? 'err-message' : undefined}
+              aria-invalid={!!fieldErrors.message}
+              className={`w-full bg-[--color-surface-container] border-b border-t-0 border-x-0 focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors resize-none placeholder:text-[--color-on-surface-variant]/70 ${
+                fieldErrors.message
+                  ? 'border-[--color-error] focus:border-[--color-error]'
+                  : 'border-[--color-outline-variant] focus:border-[--color-primary-fixed]'
+              }`}
             />
+            {fieldErrors.message && (
+              <p id="err-message" role="alert" className="font-mono text-[10px] text-[--color-error] mt-1.5 leading-snug">
+                ✗ {fieldErrors.message}
+              </p>
+            )}
           </div>
 
           {/* Honeypot */}

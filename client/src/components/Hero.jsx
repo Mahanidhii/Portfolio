@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100vh-5rem)] flex flex-col justify-center relative scroll-mt-20"
+      className="min-h-[calc(100dvh-5rem)] sm:min-h-[calc(100vh-5rem)] flex flex-col justify-center relative scroll-mt-20"
       aria-labelledby="hero-heading"
     >
       <motion.div
@@ -47,7 +47,7 @@ export default function Hero() {
         <motion.h1
           id="hero-heading"
           variants={item}
-          className="font-sora text-4xl md:text-6xl font-bold text-[--color-on-background] mb-4 leading-tight tracking-tight"
+          className="font-sora text-3xl sm:text-4xl md:text-6xl font-bold text-[--color-on-background] mb-4 leading-tight tracking-tight"
         >
           {personal.name}
         </motion.h1>
