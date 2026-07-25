@@ -33,7 +33,7 @@ export default function SkillsAchievements() {
         <div className="space-y-6">
           {skills.map((group) => (
             <div key={group.category}>
-              <h3 className="font-mono text-[10px] uppercase tracking-widest text-[--color-on-surface-variant] mb-3 border-b border-[--color-outline-variant]/30 pb-1 inline-block">
+              <h3 className="font-mono text-xs text-[--color-primary-fixed-dim] mb-2 uppercase tracking-widest">
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-2" role="list" aria-label={group.category}>

@@ -9,7 +9,16 @@ function TechBadge({ label }) {
   );
 }
 
+const PROJECT_COLORS = {
+  1: { icon: 'text-[--color-primary-fixed]', metricText: 'text-[--color-primary-fixed]', metricBg: 'bg-[--color-primary-fixed]/8', metricBorder: 'border-[--color-primary-fixed]/20', arrow: 'text-[--color-secondary]' }, // CV/ML
+  2: { icon: 'text-[--color-secondary]', metricText: 'text-[--color-secondary]', metricBg: 'bg-[--color-secondary]/8', metricBorder: 'border-[--color-secondary]/20', arrow: 'text-[--color-primary-fixed]' }, // NLP
+  3: { icon: 'text-[--color-error]', metricText: 'text-[--color-error]', metricBg: 'bg-[--color-error]/8', metricBorder: 'border-[--color-error]/20', arrow: 'text-[--color-secondary]' }, // Time-series
+  4: { icon: 'text-[--color-surface-tint]', metricText: 'text-[--color-surface-tint]', metricBg: 'bg-[--color-surface-tint]/8', metricBorder: 'border-[--color-surface-tint]/20', arrow: 'text-[--color-secondary]' }, // Data Analysis
+};
+
 function ProjectCard({ project, index, featured }) {
+  const theme = PROJECT_COLORS[project.id] || PROJECT_COLORS[1];
+
   return (
     <motion.article
       className={`glass-panel tech-border p-6 flex flex-col h-full group hover:-translate-y-2 hover:shadow-[0_0_24px_rgba(0,219,231,0.12)] transition-all duration-300 ${
@@ -24,7 +33,7 @@ function ProjectCard({ project, index, featured }) {
       {/* Card header */}
       <div className="flex justify-between items-center mb-4 border-b border-[--color-outline-variant]/30 pb-3">
         <span
-          className="material-symbols-outlined text-[--color-primary-fixed] text-2xl"
+          className={`material-symbols-outlined text-2xl ${theme.icon}`}
           aria-hidden="true"
         >
           {project.icon}
@@ -65,8 +74,8 @@ function ProjectCard({ project, index, featured }) {
 
       {/* Metric / outcome stat line */}
       {project.metric && (
-        <div className="font-mono text-[10px] text-[--color-primary-fixed] bg-[--color-primary-fixed]/8 border border-[--color-primary-fixed]/20 px-3 py-1.5 mb-4 flex items-center gap-2 leading-snug">
-          <span className="text-[--color-secondary] select-none">▸</span>
+        <div className={`font-mono text-[10px] ${theme.metricText} ${theme.metricBg} border ${theme.metricBorder} px-3 py-1.5 mb-4 flex items-center gap-2 leading-snug`}>
+          <span className={`${theme.arrow} select-none`}>▸</span>
           {project.metric}
         </div>
       )}

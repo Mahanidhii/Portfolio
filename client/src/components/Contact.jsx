@@ -239,7 +239,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/50"
+                className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/70"
               />
             </div>
             <div>
@@ -258,7 +258,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="your@email.com"
-                className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/50"
+                className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors placeholder:text-[--color-on-surface-variant]/70"
               />
             </div>
           </div>
@@ -278,7 +278,7 @@ export default function Contact() {
               value={form.message}
               onChange={handleChange}
               placeholder="Your message..."
-              className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors resize-none placeholder:text-[--color-on-surface-variant]/50"
+              className="w-full bg-[--color-surface-container] border-b border-[--color-outline-variant] border-t-0 border-x-0 focus:border-[--color-primary-fixed] focus:outline-none text-[--color-on-background] font-inter text-base py-2 transition-colors resize-none placeholder:text-[--color-on-surface-variant]/70"
             />
           </div>
 

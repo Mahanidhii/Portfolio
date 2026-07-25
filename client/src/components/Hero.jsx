@@ -74,7 +74,7 @@ export default function Hero() {
           <a
             href="#projects"
             onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="bg-[--color-primary-fixed] text-[--color-on-primary-fixed] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:bg-[--color-primary-fixed-dim] transition-colors inline-flex items-center gap-2 font-semibold"
+            className="bg-[--color-primary-fixed] text-[--color-on-primary-fixed] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:bg-[--color-primary-fixed-dim] transition-all duration-300 shadow-[0_0_12px_rgba(0,219,231,0.15)] hover:shadow-[0_0_20px_rgba(0,219,231,0.4)] inline-flex items-center gap-2 font-semibold"
             aria-label="View my projects"
           >
             View Projects
@@ -83,14 +83,14 @@ export default function Hero() {
           <a
             href="#contact"
             onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="border border-[--color-secondary] text-[--color-secondary] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:bg-[--color-secondary]/10 transition-colors"
+            className="border-2 border-[--color-secondary]/70 text-[--color-secondary] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:bg-[--color-secondary]/10 hover:border-[--color-secondary] transition-all duration-300 hover:shadow-[0_0_16px_rgba(208,188,255,0.25)]"
           >
             Get In Touch
           </a>
           <a
             href={personal.resumeUrl}
             download
-            className="border border-[--color-outline-variant]/60 text-[--color-on-surface-variant] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:border-[--color-primary-fixed]/50 hover:text-[--color-primary-fixed] transition-colors inline-flex items-center gap-2"
+            className="border-2 border-[--color-outline-variant]/60 text-[--color-on-surface-variant] font-mono text-xs uppercase tracking-widest px-6 py-3 hover:border-[--color-primary-fixed]/60 hover:text-[--color-primary-fixed] transition-all duration-300 hover:shadow-[0_0_16px_rgba(0,219,231,0.2)] hover:bg-[--color-primary-fixed]/5 inline-flex items-center gap-2"
             aria-label="Download resume PDF"
           >
             <span className="material-symbols-outlined text-base" aria-hidden="true">download</span>

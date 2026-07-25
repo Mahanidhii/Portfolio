@@ -113,29 +113,20 @@ export const projects = [
 
 export const skills = [
   {
-    category: 'Languages',
+    category: 'LANGUAGES',
     items: ['Python', 'Java', 'SQL', 'HTML', 'CSS', 'PHP'],
   },
   {
-    category: 'Libraries / Frameworks',
-    items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Plotly Express', 'PyTorch', 'TensorFlow', 'Scikit-learn'],
+    category: 'ML & DATA',
+    items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Plotly Express', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'Data Analytics', 'Machine Learning', 'Deep Learning (Neural Networks)', 'Computer Vision'],
   },
   {
-    category: 'Tools & Platforms',
+    category: 'WEB & BACKEND',
+    items: ['DBMS', 'Operating Systems', 'Computer Networks', 'Data Structures & Algorithms'],
+  },
+  {
+    category: 'TOOLS & PLATFORMS',
     items: ['VS Code', 'Git', 'GitHub', 'Tableau', 'Docker'],
-  },
-  {
-    category: 'Coursework',
-    items: [
-      'Data Structures & Algorithms',
-      'Operating Systems',
-      'Computer Networks',
-      'DBMS',
-      'Data Analytics',
-      'Machine Learning',
-      'Deep Learning (Neural Networks)',
-      'Computer Vision',
-    ],
   },
 ];
 
