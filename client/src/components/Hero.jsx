@@ -18,7 +18,7 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <motion.div
-        className="glass-panel tech-border p-8 md:p-12 max-w-4xl"
+        className="glass-panel tech-border p-8 md:p-12 w-full lg:max-w-5xl xl:max-w-6xl"
         variants={container}
         initial="hidden"
         animate="show"
