@@ -52,13 +52,17 @@ app.use((err, _req, res, _next) => {
 });
 
 // ── Start ───────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🚀 Portfolio server running on http://localhost:${PORT}`);
-  console.log(`   Health: http://localhost:${PORT}/api/health`);
-  console.log(`   Contact: POST http://localhost:${PORT}/api/contact\n`);
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Portfolio server running on http://localhost:${PORT}`);
+    console.log(`   Health: http://localhost:${PORT}/api/health`);
+    console.log(`   Contact: POST http://localhost:${PORT}/api/contact\n`);
 
-  if (!process.env.SMTP_USER || process.env.SMTP_USER.startsWith('your_')) {
-    console.warn('⚠  SMTP not configured — email sends will be MOCKED to console.');
-    console.warn('   Copy server/.env.example to server/.env and fill in credentials.\n');
-  }
-});
+    if (!process.env.SMTP_USER || process.env.SMTP_USER.startsWith('your_')) {
+      console.warn('⚠  SMTP not configured — email sends will be MOCKED to console.');
+      console.warn('   Copy server/.env.example to server/.env and fill in credentials.\n');
+    }
+  });
+}
+
+module.exports = app;
