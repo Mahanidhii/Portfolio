@@ -38,7 +38,7 @@ export default function App() {
 
       {/* ── Main content ────────────────────────────────────── */}
       <main
-        className="max-w-[1440px] mx-auto pt-20 md:pt-28 pb-16 md:pb-24 px-4 sm:px-6 md:px-16 flex flex-col gap-16 md:gap-32"
+        className="max-w-[1600px] mx-auto pt-20 md:pt-28 pb-16 md:pb-24 px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-44 flex flex-col gap-16 md:gap-28 xl:gap-36 2xl:gap-44"
       >
         <Hero />
         <About />

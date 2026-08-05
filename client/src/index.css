@@ -62,7 +62,9 @@
 
   /* Spacing */
   --spacing-gutter:          24px;
-  --spacing-margin-desktop:  64px;
+  --spacing-margin-desktop:  80px;
+  --spacing-margin-xl:       120px;
+  --spacing-margin-2xl:      160px;
   --spacing-margin-mobile:   20px;
 }
 

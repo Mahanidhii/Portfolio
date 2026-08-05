@@ -18,7 +18,7 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       <motion.div
-        className="glass-panel tech-border p-8 md:p-12 w-full lg:max-w-5xl xl:max-w-6xl"
+        className="glass-panel tech-border p-8 md:p-12 xl:p-16 2xl:p-20 w-full"
         variants={container}
         initial="hidden"
         animate="show"
@@ -47,7 +47,7 @@ export default function Hero() {
         <motion.h1
           id="hero-heading"
           variants={item}
-          className="font-sora text-3xl sm:text-4xl md:text-6xl font-bold text-[--color-on-background] mb-4 leading-tight tracking-tight"
+          className="font-sora text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-[--color-on-background] mb-4 leading-tight tracking-tight"
         >
           {personal.name}
         </motion.h1>
@@ -55,7 +55,7 @@ export default function Hero() {
         {/* Tagline */}
         <motion.h2
           variants={item}
-          className="font-sora text-xl md:text-2xl font-semibold mb-6 scanline-text leading-snug"
+          className="font-sora text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl font-semibold mb-6 scanline-text leading-snug"
         >
           {personal.tagline}
         </motion.h2>
@@ -63,14 +63,14 @@ export default function Hero() {
         {/* Sub-text */}
         <motion.p
           variants={item}
-          className="font-inter text-base text-[--color-on-surface-variant] max-w-2xl mb-8 leading-relaxed"
+          className="font-inter text-base xl:text-lg 2xl:text-xl text-[--color-on-surface-variant] max-w-3xl xl:max-w-4xl mb-8 leading-relaxed"
         >
           Building end-to-end AI systems — from deep learning models to production-ready web apps.
           Engineering precision in high-stakes environments.
         </motion.p>
 
         {/* CTA Buttons */}
-        <motion.div variants={item} className="flex flex-wrap gap-4">
+        <motion.div variants={item} className="flex flex-wrap gap-3 sm:gap-4 xl:gap-5">
           <a
             href="#projects"
             onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); }}
@@ -136,7 +136,7 @@ export default function Hero() {
 
       {/* Decorative syntax brace */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.06] pointer-events-none hidden lg:block select-none" aria-hidden="true">
-        <span className="font-mono text-[140px] leading-none text-[--color-primary-fixed]">{'}'}</span>
+        <span className="font-mono text-[140px] xl:text-[200px] 2xl:text-[260px] leading-none text-[--color-primary-fixed]">{'}'}</span>
       </div>
     </section>
   );

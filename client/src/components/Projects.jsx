@@ -21,7 +21,7 @@ function ProjectCard({ project, index, featured }) {
 
   return (
     <motion.article
-      className={`glass-panel tech-border p-6 flex flex-col h-full group hover:-translate-y-2 hover:shadow-[0_0_24px_rgba(0,219,231,0.12)] transition-all duration-300 ${
+      className={`glass-panel tech-border p-6 xl:p-8 flex flex-col h-full group hover:-translate-y-2 hover:shadow-[0_0_24px_rgba(0,219,231,0.12)] transition-all duration-300 ${
         featured ? 'md:col-span-2' : ''
       }`}
       initial={{ opacity: 0, y: 28 }}
@@ -64,7 +64,7 @@ function ProjectCard({ project, index, featured }) {
         </div>
       </div>
 
-      <h3 className="font-sora text-lg font-semibold text-[--color-on-background] mb-3">
+      <h3 className="font-sora text-lg xl:text-xl font-semibold text-[--color-on-background] mb-3">
         {project.title}
       </h3>
 
@@ -106,18 +106,18 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24" aria-labelledby="projects-heading">
       {/* Section header */}
-      <div className="flex items-center gap-4 mb-12">
+      <div className="flex items-center gap-4 mb-10 xl:mb-14">
         <h2
           id="projects-heading"
-          className="font-sora text-2xl font-semibold text-[--color-on-background] whitespace-nowrap"
+          className="font-sora text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[--color-on-background] whitespace-nowrap"
         >
           <span className="text-[--color-primary-fixed] mr-2">03.</span>Projects
         </h2>
-        <div className="h-px bg-[--color-outline-variant]/50 flex-grow max-w-xs" aria-hidden="true" />
+        <div className="h-px bg-[--color-outline-variant]/50 flex-grow max-w-xs xl:max-w-md" aria-hidden="true" />
       </div>
 
       {/* Card grid — featured projects span 2 cols */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 xl:gap-8">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.id}

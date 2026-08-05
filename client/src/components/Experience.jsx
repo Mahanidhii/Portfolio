@@ -5,14 +5,14 @@ export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-24" aria-labelledby="exp-heading">
       {/* Section header */}
-      <div className="flex items-center gap-4 mb-12">
+      <div className="flex items-center gap-4 mb-10 xl:mb-14">
         <h2
           id="exp-heading"
-          className="font-sora text-2xl font-semibold text-[--color-on-background] whitespace-nowrap"
+          className="font-sora text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[--color-on-background] whitespace-nowrap"
         >
           <span className="text-[--color-primary-fixed] mr-2">02.</span>Experience
         </h2>
-        <div className="h-px bg-[--color-outline-variant]/50 flex-grow max-w-xs" aria-hidden="true" />
+        <div className="h-px bg-[--color-outline-variant]/50 flex-grow max-w-xs xl:max-w-md" aria-hidden="true" />
       </div>
 
       {/* Timeline */}
@@ -33,9 +33,9 @@ export default function Experience() {
               aria-hidden="true"
             />
 
-            <div className="glass-panel tech-border p-6 group-hover:border-[--color-primary-fixed]/40 transition-colors duration-300">
+            <div className="glass-panel tech-border p-6 xl:p-8 2xl:p-10 group-hover:border-[--color-primary-fixed]/40 transition-colors duration-300">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-2">
-                <h3 className="font-sora text-lg font-semibold text-[--color-on-background]">
+                <h3 className="font-sora text-lg xl:text-xl 2xl:text-2xl font-semibold text-[--color-on-background]">
                   {exp.role}
                 </h3>
                 <span className="font-mono text-xs text-[--color-secondary] shrink-0">{exp.company}</span>
@@ -54,7 +54,7 @@ export default function Experience() {
                 ))}
               </div>
 
-              <p className="font-inter text-sm text-[--color-on-surface-variant] leading-relaxed">
+              <p className="font-inter text-sm xl:text-base text-[--color-on-surface-variant] leading-relaxed">
                 {exp.description}
               </p>
             </div>

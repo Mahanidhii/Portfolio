@@ -49,7 +49,7 @@ export default function Navbar() {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="flex justify-between items-center w-full px-5 md:px-16 py-4 max-w-[1440px] mx-auto">
+      <div className="flex justify-between items-center w-full px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-44 py-4 max-w-[1600px] mx-auto">
 
         {/* Logo */}
         <a

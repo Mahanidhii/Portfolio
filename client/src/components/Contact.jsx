@@ -223,7 +223,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 max-w-3xl mx-auto w-full text-center"
+      className="scroll-mt-24 max-w-3xl xl:max-w-5xl 2xl:max-w-6xl mx-auto w-full text-center"
       aria-labelledby="contact-heading"
     >
       <motion.div
@@ -234,18 +234,18 @@ export default function Contact() {
       >
         <h2
           id="contact-heading"
-          className="font-sora text-3xl font-bold text-[--color-on-background] mb-4"
+          className="font-sora text-3xl xl:text-4xl 2xl:text-5xl font-bold text-[--color-on-background] mb-4"
         >
           <span className="text-[--color-primary-fixed] mr-2">06.</span>Initiate Connection
         </h2>
-        <p className="font-inter text-base text-[--color-on-surface-variant] mb-10 leading-relaxed">
+        <p className="font-inter text-base xl:text-lg text-[--color-on-surface-variant] mb-10 leading-relaxed">
           My inbox is open for new opportunities, collaborations, or technical discourse.
           Whether you have a specific inquiry or just want to establish a node connection,
           I'll strive to respond promptly.
         </p>
 
         <form
-          className="glass-panel tech-border p-5 sm:p-8 text-left space-y-6"
+          className="glass-panel tech-border p-5 sm:p-8 xl:p-10 2xl:p-12 text-left space-y-6"
           onSubmit={handleSubmit}
           noValidate
           aria-label="Contact form"

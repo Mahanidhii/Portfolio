@@ -14,7 +14,7 @@ export default function Footer() {
       className="w-full py-10 border-t border-[--color-outline-variant]/20 bg-[--color-surface-container-lowest] mt-12"
       role="contentinfo"
     >
-      <div className="max-w-[1440px] mx-auto px-5 md:px-16 flex flex-col md:flex-row justify-between items-center gap-5">
+      <div className="max-w-[1600px] mx-auto px-5 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-44 flex flex-col md:flex-row justify-between items-center gap-5">
 
         {/* Logo */}
         <div className="font-sora text-base font-bold text-[--color-primary]">

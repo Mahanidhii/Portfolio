@@ -3,7 +3,7 @@ import { skills, achievements } from '../data/content.js';
 
 function SkillTag({ label }) {
   return (
-    <span className="font-mono text-xs bg-[--color-surface-container] border border-[--color-outline-variant]/50 px-3 py-1 text-[--color-on-background]">
+    <span className="font-mono text-xs xl:text-sm bg-[--color-surface-container] border border-[--color-outline-variant]/50 px-3 py-1 xl:px-4 xl:py-1.5 text-[--color-on-background]">
       {label}
     </span>
   );
@@ -16,7 +16,7 @@ export default function SkillsAchievements() {
       {/* ── Skills (2 of 3 cols) ─────────────────────────────── */}
       <motion.section
         id="skills"
-        className="lg:col-span-2 glass-panel tech-border p-5 sm:p-8 scroll-mt-24"
+        className="lg:col-span-2 glass-panel tech-border p-5 sm:p-8 xl:p-10 2xl:p-12 scroll-mt-24"
         aria-labelledby="skills-heading"
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ export default function SkillsAchievements() {
       >
         <h2
           id="skills-heading"
-          className="font-sora text-2xl font-semibold text-[--color-on-background] mb-8 flex items-center gap-2"
+          className="font-sora text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[--color-on-background] mb-8 flex items-center gap-2"
         >
           <span className="text-[--color-primary-fixed]">04.</span> Core Competencies
         </h2>
@@ -51,7 +51,7 @@ export default function SkillsAchievements() {
       {/* ── Achievements (1 of 3 cols) ───────────────────────── */}
       <motion.section
         id="achievements"
-        className="glass-panel tech-border p-5 sm:p-8 flex flex-col scroll-mt-24"
+        className="glass-panel tech-border p-5 sm:p-8 xl:p-10 2xl:p-12 flex flex-col scroll-mt-24"
         aria-labelledby="ach-heading"
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function SkillsAchievements() {
       >
         <h2
           id="ach-heading"
-          className="font-sora text-2xl font-semibold text-[--color-on-background] mb-8 flex items-center gap-2"
+          className="font-sora text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[--color-on-background] mb-8 flex items-center gap-2"
         >
           <span className="text-[--color-primary-fixed]">05.</span> Accolades
         </h2>

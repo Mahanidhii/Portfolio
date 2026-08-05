@@ -11,20 +11,20 @@ export default function About() {
   return (
     <section id="about" className="scroll-mt-24" aria-labelledby="about-heading">
       {/* Section header */}
-      <div className="flex items-center gap-4 mb-12">
+      <div className="flex items-center gap-4 mb-10 xl:mb-14">
         <h2
           id="about-heading"
-          className="font-sora text-2xl font-semibold text-[--color-on-background] whitespace-nowrap"
+          className="font-sora text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-[--color-on-background] whitespace-nowrap"
         >
           <span className="text-[--color-primary-fixed] mr-2">01.</span>About
         </h2>
-        <div className="h-px bg-[--color-outline-variant]/50 flex-grow max-w-xs" aria-hidden="true" />
+        <div className="h-px bg-[--color-outline-variant]/50 flex-grow max-w-xs xl:max-w-md" aria-hidden="true" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16 items-start">
         {/* Text */}
         <motion.div
-          className="glass-panel tech-border p-8"
+          className="glass-panel tech-border p-8 xl:p-10 2xl:p-12 xl:col-span-2"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
@@ -33,7 +33,7 @@ export default function About() {
           {personal.bio.map((para, i) => (
             <p
               key={i}
-              className={`font-inter text-base text-[--color-on-surface-variant] leading-relaxed ${i < personal.bio.length - 1 ? 'mb-5' : ''}`}
+              className={`font-inter text-base xl:text-lg text-[--color-on-surface-variant] leading-relaxed ${i < personal.bio.length - 1 ? 'mb-5' : ''}`}
             >
               {para}
             </p>
