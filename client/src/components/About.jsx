@@ -64,7 +64,7 @@ export default function About() {
           <img
             src={selfPic}
             alt="Mahanidhi G K"
-            className="glass-panel tech-border w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            className="glass-panel tech-border w-full object-cover transition-all duration-500"
             style={{ minHeight: '320px', maxHeight: '420px' }}
           />
           {/* Offset border decoration */}
