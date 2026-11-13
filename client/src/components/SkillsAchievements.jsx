@@ -88,7 +88,7 @@ export default function SkillsAchievements() {
         </div>
 
         {/* Decorative icon */}
-        <div className="mt-8 text-right opacity-[0.12] pointer-events-none" aria-hidden="true">
+        <div className="mt-8 text-right opacity-[0.35] pointer-events-none text-white" aria-hidden="true">
           <span className="material-symbols-outlined text-7xl">emoji_events</span>
         </div>
       </motion.section>
